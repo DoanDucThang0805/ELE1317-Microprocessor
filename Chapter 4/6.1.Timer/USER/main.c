@@ -14,6 +14,7 @@ int main (void){
 	LED_Init();
 	Timer2_Init();
 	Timer4_Init();
+	NVIC_InitIRQTimer4();
 	while(1){
 		if(TIM_GetITStatus(TIM2,TIM_IT_Update) != RESET){
 			//Toggle LED B1 when Timer 2 is updated
